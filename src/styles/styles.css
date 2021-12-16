@@ -1,0 +1,137 @@
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 80px;
+  height: 80px; */
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.sidebar-close {
+  right: -350px;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar-open {
+  right: 0px;
+  transition: all 0.5s ease-in-out;
+}
+.meu-tabs {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 30px;
+  transition: all 0.3s;
+}
+.meu-tabs:hover {
+  letter-spacing: 3px;
+  color: #2d83e6;
+  transition: all 0.3s;
+}
+
+.btnDiscord {
+  font-weight: 800;
+  z-index: 100;
+  background-color: #2d83e6;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  width: 160px;
+  outline: none;
+  position: relative;
+}
+
+.btnDiscord::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0);
+  transition: transform 300ms ease-in-out;
+  transform: scaleY(0);
+  transform-origin: left;
+  border-radius: 10px;
+}
+
+.btnDiscord:hover::before,
+.btnDiscord:focus::before {
+  transform: scaleY(1);
+}
+
+.btnTremsAndConditions {
+  font-weight: 800;
+  z-index: 100;
+  background-color: #444444;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  width: 260px;
+  outline: none;
+  position: relative;
+}
+.btnTremsAndConditions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0);
+  transition: transform 300ms ease-in-out;
+  transform: scaleY(0);
+  transform-origin: left;
+  border-radius: 10px;
+}
+
+.btnTremsAndConditions:hover::before,
+.btnTremsAndConditions:focus::before {
+  transform: scaleY(1);
+}
+
+.crown-image {
+}
+
+.crown-image:hover {
+}
